@@ -51,7 +51,7 @@ def main():
         if t == 'observation':
             continue
 
-        if p > 0:
+        if args.debug or p > 0:
             msg_list.append(f'{dt}: p={p}')
 
     if msg_list:
