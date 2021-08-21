@@ -49,9 +49,12 @@ def main():
             print(f'[DEBUG] {t}, {dt}, {p}')
 
         if t == 'observation':
-            continue
+            if p >= 1.0:
+                break
+            else:
+                continue
 
-        if args.debug or p > 0:
+        if args.debug or p >= 0.3:
             msg_list.append(f'{dt}: p={p}')
 
     if msg_list:
